@@ -11,6 +11,14 @@
       ]
     },
     {
+      "name": "AppEntity",
+      "type": "table",
+      "tableName": "appreg",
+      "partitionKey": "app",
+      "connection": "AzureWebJobsStorage",
+      "direction": "in"
+    },
+    {
       "type": "http",
       "direction": "out",
       "name": "Response"
