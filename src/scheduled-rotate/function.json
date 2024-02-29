@@ -1,13 +1,10 @@
 {
   "bindings": [
     {
-      "authLevel": "function",
-      "type": "httpTrigger",
+      "name": "Timer",
+      "type": "timerTrigger",
       "direction": "in",
-      "name": "Request",
-      "methods": [
-        "post"
-      ]
+      "schedule": "0 0 0 * * *"
     },
     {
       "name": "TableStorageRows",
@@ -16,11 +13,6 @@
       "partitionKey": "app",
       "connection": "AzureWebJobsStorage",
       "direction": "in"
-    },
-    {
-      "type": "http",
-      "direction": "out",
-      "name": "Response"
     }
   ]
 }
