@@ -11,7 +11,7 @@
       ]
     },
     {
-      "name": "AppEntity",
+      "name": "TableStorageRows",
       "type": "table",
       "tableName": "appreg",
       "partitionKey": "app",

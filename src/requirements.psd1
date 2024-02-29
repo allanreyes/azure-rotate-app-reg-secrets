@@ -6,4 +6,5 @@
     # 'Az' = 'MAJOR_VERSION.*'
     'Microsoft.Graph.Applications' = '2.15.0'
     'Az.KeyVault' = '4.10.0'
+    'Az.Accounts' = '2.13.1'
 }

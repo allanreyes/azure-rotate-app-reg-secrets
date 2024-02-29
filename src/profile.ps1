@@ -16,6 +16,15 @@ if ($env:MSI_SECRET) {
     Connect-AzAccount -Identity
 }
 
+# Load all modules under _Modules folder
+$modulePath = "$PSScriptRoot\_Modules"
+if (Test-Path $modulePath) {
+    $modules = Get-ChildItem -Path $modulePath -Recurse -Filter "*.psm1" | ForEach-Object { $_.FullName }
+    foreach ($module in $modules) {
+        Import-Module $module
+    }
+}
+
 # Uncomment the next line to enable legacy AzureRm alias in Azure PowerShell.
 # Enable-AzureRmAlias
 
