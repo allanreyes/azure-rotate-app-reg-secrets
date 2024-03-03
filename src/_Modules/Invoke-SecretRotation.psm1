@@ -70,7 +70,7 @@ function Invoke-SecretRotation {
         $params = @{
             keyId = $key.keyId
         }        
-        Remove-MgApplicationPassword -ApplicationId $ObjectId -BodyParameter $params
+        Remove-MgApplicationPassword -ApplicationId $app.Id -BodyParameter $params
     }
 
     # Disable expired secrets in key vault
