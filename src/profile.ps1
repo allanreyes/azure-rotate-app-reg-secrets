@@ -14,6 +14,7 @@
 if ($env:MSI_SECRET) {
     Disable-AzContextAutosave -Scope Process | Out-Null
     Connect-AzAccount -Identity
+    Connect-MgGraph -Identity
 }
 
 # Load all modules under _Modules folder
